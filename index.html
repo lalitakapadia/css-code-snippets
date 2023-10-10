@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+    <head>
+        <title>CSS Snippet Cheatsheet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>CSS Snippet CheatSheet</h1>
+            <p>Really fun hover effects with transform-origin.</p>
+
+            <!-- Navbar -->
+            
+    
+        </header>
+        <main>
+            <div>
+                <div class="snippet-heading">Flexbox row</div>
+                <p>Use these three propertiesto create a flexbox row layout.</p>
+                <pre class="snippet-body">
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+                </pre>
+            </div>
+            <div>
+                <div class="snippet-heading">Flexbox column</div>
+                <p>Use this to create a Flexbox column layout.</p>
+                <pre class="snippet-body">
+.column {
+  display: flex;
+  flex-direction: column;
+}
+                </pre>
+            </div>
+            <div>
+                <div class="snippet-heading">CSS Grid layout</div>
+                <p>Build a 12-column layout using CSS Grid.</p>
+                <pre class="snippet-body">
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 
+repeat(12, 1fr);
+}
+                </pre>
+            </div>
+            <div>
+                <div class="snippet-heading">Linear Gradients</div>
+                <p>this will create a background linear gradient from top to bottom.</p>
+                <pre class="snippet-body">
+.linear-gradient-background {
+  background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.3) 100%
+    );
+} 
+                </pre>
+            </div>
+            <div>
+                <div class="snippet-heading">Box Transion Glow</div>
+                <p>Use transition and box shadows to glow on hover.</p>
+                <pre class="snippet-body">
+.code-card .code-header {
+  border-radious: 8px;
+  transition: all 0.5s ease-in-out;
+  }
+  .code-card:hover,
+  .code-card-hover .card-header{
+     box-shadow: inset 0px 0px 8px 
+     rgba(232, 102 236,1),0 0 15px
+     rgba(232, 102, 236, 1);
+}
+                
+                </pre>
+            </div>
+            <div>
+                <div class="snippet-heading">Overlay Card with Title</div>
+                <p>Use posion properties and negative margins to raise elements higher than their natural starting point.</p>
+                <pre class="snippet-body">
+.card-header {
+  position: relative;
+  margin-top: -20px;
+}
+                </pre>
+            </div>
+
+        </main>
+        <footer>
+            <h2>Made with <span role="img" aria-label="heart">❤️</span> and CSS</h2>
+        </footer>
+    </body>
+</html>

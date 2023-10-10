@@ -1,0 +1,106 @@
+:root {
+    --snippet-margin: 10px;
+    --front-color: violet;
+    --back-color: violet;
+    --snippet-radius: 5px;
+  }
+  
+  * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      background-color: black;
+      color: violet;
+    }
+  
+    header{
+      text-align: center;
+    }
+  
+    body header p {
+      color: white;
+      text-align: center;
+    }
+  
+    main {
+      /* Turns this element into a flexbox */
+      display: grid;
+      width: 100%;
+    }
+    footer {
+      margin: 1.5rem;
+      text-align: center;
+      
+    }
+  
+    div{
+      border-style:dashed; 
+      border-color: white;
+      margin: var(--snippet-margin);
+      position: relative;
+      text-wrap: wrap;
+      text-align: left;
+      padding: 10px;
+    }
+  
+    div p{
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 20px;
+    }
+  
+    .snippet-heading{
+      border-style: solid;
+      font-size: 20px;
+      font-weight: bold;
+      margin: var(--snippet-margin);
+      border-radius: var(--snippet-radius);
+      position: absolute;
+      top: -20px;
+      width: 90%;
+      color: var(--front-color);
+      text-align: left;
+      background-color: black;
+      opacity: 100;
+      user-select: all;
+      -webkit-user-select: all;
+    }
+  
+    .snippet-body {
+      border: none;
+      color: white;
+      border-radius: var(--snippet-radius);
+      background-image: linear-gradient(
+          rgba(143, 8, 148, 0.3) 0%,
+          rgba(232, 102, 236, 0.6) 100%
+      );
+      font-family: monospace;
+      text-align: left;
+      padding-top: 10px;
+      display: relative;
+      padding-left: 10px;
+    
+  
+  /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
+  
+    /* desktop - header changes color */
+  @media screen and (min-width: 768px) {
+    main{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* tablet - navbar changes color */
+  @media screen and (max-width: 768px) {
+    main{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Small smartphones - image placeholders change color */
+  @media screen and (max-width: 576px) {
+    main{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
